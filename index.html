@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dev Simmons Videos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>DEV SIMMONS VIDEO GALLERY WITH JS</h1>
+        <div class="row">
+            <div class="col">
+                <div class="feature-img">
+                    <img src="media/pic3.png" width="100%">
+                    <img src="media/play.png" class="play-btn" onclick="playVideo('media/vid4.mp4')">
+                </div>
+            </div>
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="media/pic3.png" width="120px">
+                        <img src="media/play.png" class="play-btn" onclick="playVideo('media/vid4.mp4')">
+                    </div>
+                    <p>How to hack cbn in seven hours with html and go to jail for seventy years in kirikiri prison.</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="media/web.jpg" width="120px">
+                        <img src="media/play.png" class="play-btn">
+                        <img src="media/play.png" class="play-btn" onclick="playVideo('media/vid1.mp4')">
+                    </div>
+                    <p>How to hack cbn in seven hours with html and go to jail for seventy years in kirikiri prison.</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="media/anonymous.jpg" width="120px">
+                        <img src="media/play.png" class="play-btn">
+                        <img src="media/play.png" class="play-btn" onclick="playVideo('media/vid3.mp4')">
+
+                    </div>
+                    <p>How to hack cbn in seven hours with html and go to jail for seventy years in kirikiri prison.</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="media/ai.jpg" width="120px">
+                        <img src="media/play.png" class="play-btn">
+                        <img src="media/play.png" class="play-btn" onclick="playVideo('media/vid2.mp4')">
+
+                    </div>
+                    <p>How to hack cbn in seven hours with html and go to jail for seventy years in kirikiri prison.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-player" id="videoPlayer">
+        <video width="100%" controls autoplay id="myVideo">
+            <source src="media/vid4.mp4" type="video/mp4">
+        </video>
+        <img src="media/close.png" class="close-btn" onclick="stopVideo()">
+    </div>
+
+    <script>
+        var videoPlayer = document.getElementById("videoPlayer");
+        var myVideo = document.getElementById("myVideo");
+
+        function stopVideo(){
+            videoPlayer.style.display = "none";
+        }
+
+        function playVideo(file){
+            myVideo.src = file;
+            videoPlayer.style.display = "block";
+        }
+
+    </script>
+</body>
+</html>
